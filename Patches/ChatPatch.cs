@@ -109,6 +109,7 @@ namespace NebulaAIChat.Patches
                 }
             }
             catch { }
+
             // 回退：游戏本体账号名
             try
             {

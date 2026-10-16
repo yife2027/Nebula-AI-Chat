@@ -43,9 +43,7 @@ if not exist "%OUTPUT_DLL%" (
 echo.
 echo "[2/4] 正在复制 DLL 到游戏插件目录..."
 if not exist "%TARGET_DIR%" (
-    echo "[错误] 找不到插件目录: %TARGET_DIR%"
-    pause
-    exit /b 1
+    mkdir "%TARGET_DIR%"
 )
 
 copy /Y "%OUTPUT_DLL%" "%TARGET_DIR%\" >nul

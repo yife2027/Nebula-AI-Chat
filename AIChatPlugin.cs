@@ -21,7 +21,7 @@ namespace NebulaAIChat
     [BepInDependency(NebulaModAPI.NEBULA_MODID, BepInDependency.DependencyFlags.HardDependency)]
     public class AIChatPlugin : BaseUnityPlugin
     {
-        public const string PluginGuid = "com.nebula.aichat";
+        public const string PluginGuid = "com.yourname.nebula.aichat";
         public const string PluginName = "Nebula AI Chat";
         public const string PluginVersion = "1.5.0";
 
