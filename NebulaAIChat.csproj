@@ -1,0 +1,87 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>Nebula-AI</AssemblyName>
+    <RootNamespace>NebulaAIChat</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugType>none</DebugType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <!-- BepInEx / Harmony：从游戏目录直接引用 -->
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>D:\mystream\dsp[steam]\steamApps\common\Dyson Sphere Program\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>D:\mystream\dsp[steam]\steamApps\common\Dyson Sphere Program\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- System.Net.Http：游戏 Managed 目录里有 -->
+  <ItemGroup>
+    <Reference Include="System.Net.Http">
+      <HintPath>D:\mystream\dsp[steam]\steamApps\common\Dyson Sphere Program\DSPGAME_Data\Managed\System.Net.Http.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Newtonsoft.Json 走 NuGet，net472 可用 -->
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <!-- Unity 程序集 -->
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\mystream\dsp[steam]\steamApps\common\Dyson Sphere Program\DSPGAME_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\mystream\dsp[steam]\steamApps\common\Dyson Sphere Program\DSPGAME_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\mystream\dsp[steam]\steamApps\common\Dyson Sphere Program\DSPGAME_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:\mystream\dsp[steam]\steamApps\common\Dyson Sphere Program\DSPGAME_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\mystream\dsp[steam]\steamApps\common\Dyson Sphere Program\DSPGAME_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Nebula 程序集 -->
+  <ItemGroup>
+    <Reference Include="NebulaAPI">
+      <HintPath>D:\dsp-mod\MyDysonMod\libs\NebulaAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NebulaPatcher">
+      <HintPath>D:\dsp-mod\MyDysonMod\libs\NebulaPatcher.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NebulaModel">
+      <HintPath>D:\dsp-mod\MyDysonMod\libs\NebulaModel.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NebulaWorld">
+      <HintPath>D:\dsp-mod\MyDysonMod\libs\NebulaWorld.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NebulaNetwork">
+      <HintPath>D:\dsp-mod\MyDysonMod\libs\NebulaNetwork.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
